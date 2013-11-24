@@ -1,0 +1,30 @@
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/log/*
+/tmp
+
+.DS_Store
+Thumbs.db
+*.orig
+*.swp
+/vendor/bundle
+/Gemfile.lock
+/public/_files/*
+!/public/_files/.gitkeep
+/public/_temp_files/*
+!/public/_temp_files/.gitkeep
+/public/_temp_contents_files/*
+!/public/_temp_contents_files/.gitkeep
+/_files/*
+!/_files/.gitkeep
+/.metadata
+/.project
+/.sass-cache
+dump.rdb
