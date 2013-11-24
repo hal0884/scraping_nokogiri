@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-
 require 'nokogiri'
-
 
 file = File.open("test.html")
 doc = Nokogiri::HTML(file)
