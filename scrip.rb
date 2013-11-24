@@ -24,12 +24,11 @@ class NScraping
         mapping(ccc)
       }
     end
+    @ans
   end
 end
 
 ns = NScraping.new()
 aaa = ns.mapping(doc.xpath('//body'))
 puts aaa
-puts ns.ans
-puts ns.ans.class
 
