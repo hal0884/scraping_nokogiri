@@ -3,6 +3,8 @@ require 'bundler/setup'
 require 'kconv'
 require 'nokogiri'
 
+require 'open-uri'
+require 'openssl'
 
 
 def strip(src, url = nil)
@@ -33,6 +35,7 @@ def strip(src, url = nil)
 end
 
 
-file = File.open("test.html")
-doc = Nokogiri::HTML(file)
+#file = File.open("test.html")
+#doc = Nokogiri::HTML(file)
+doc = Nokogiri::HTML(open('https://stores.jp' , :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
 strip(doc.inner_html)
