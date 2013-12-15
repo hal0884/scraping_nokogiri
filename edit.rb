@@ -25,7 +25,10 @@ def strip(src, url = nil)
 
   dom.xpath('//text()').each do |t|
     if t.content.strip.length > 0
+      #puts t.parent
+      puts t.path
       puts t.content.strip
+      puts "========================================================"
     end
   end
   #ans = dom.xpath('//text()').map{ |n|
@@ -37,5 +40,7 @@ end
 
 #file = File.open("test.html")
 #doc = Nokogiri::HTML(file)
-doc = Nokogiri::HTML(open('https://stores.jp' , :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
+#file_url = 'https://stores.jp'
+file_url = '/Users/hal0884/project/scraping_nokogiri/test.html'
+doc = Nokogiri::HTML(open(file_url , :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE))
 strip(doc.inner_html)
